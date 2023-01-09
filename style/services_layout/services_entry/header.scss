@@ -1,0 +1,242 @@
+header {
+  margin-bottom: 30px;
+  @include min($md) {
+    margin-bottom: 60px;
+  }
+}
+.h-menu {
+  @include min($lg) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 95vw;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  display: flex;
+  flex-direction: column;
+  .lg-left-section {
+    @include max(1023px) {
+      display: none;
+    }
+  }
+  &-fbar {
+    background: rgba(245, 245, 250, 0.2);
+    padding: 12px 0;
+    @include min($sm) {
+      background: none;
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include min($sm) {
+        justify-content: space-between;
+        align-items: center;
+        @include min(579px) {
+          justify-content: flex-start;
+        }
+        & > {
+          address,
+          div,
+          ul {
+            @include min(579px) {
+              margin-right: 10px;
+            }
+            // margin-right: 10px;
+          }
+        }
+        .fb-logo {
+          margin-right: 0;
+        }
+        .fb-logo:hover {
+          filter: invert(79%) sepia(55%) saturate(7491%) hue-rotate(332deg)
+            brightness(95%) contrast(97%);
+          cursor: pointer;
+        }
+      }
+      @include min($lg) {
+        justify-content: flex-end;
+      }
+      .lang {
+        @include font($ffamily, $fstyle, 700, 12px, 15px);
+        text-align: center;
+        letter-spacing: 1px;
+        color: #ffffff;
+        flex-basis: 30%;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        @include min($sm) {
+          flex-basis: 15%;
+        }
+        li {
+          a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 5px 7px;
+          }
+          a:focus {
+            background: #e6628c;
+            border-radius: 8px;
+          }
+        }
+        a:hover {
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 8px;
+        }
+        .item.active {
+          background: $accent-bgcolor;
+          border-radius: 8px;
+        }
+      }
+      .info {
+        a {
+          @include font($ffamily, $fstyle, 700, 16px, 20px);
+          color: #ffffff;
+          text-decoration: none;
+        }
+        a:hover {
+          color: $accent-bgcolor;
+        }
+      }
+      .separate {
+        @include max(575px) {
+          display: none;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+      .fb-logo {
+        @include max(575px) {
+          display: none;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+      address {
+        @include max(575px) {
+          display: none;
+        }
+        @include font($ffamily, $fstyle, 400, 16px, 20px);
+        color: #b3b3ba;
+      }
+    }
+  }
+  &-sbar {
+    padding: 15px 0;
+    @include min($md) {
+      padding: 0;
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include min($md) {
+        flex-direction: column;
+      }
+    }
+    .self {
+      justify-content: end;
+    }
+  }
+  &-nav {
+    @include max(767px) {
+      position: absolute;
+    }
+    @include min($lg) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &-logo {
+    width: 100%;
+    @include min($md) {
+      margin: 30px 0;
+    }
+    @include min($lg) {
+      display: none;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &-text {
+    @include font($ffamily, $fstyle, 700, 24px, 29px);
+    text-align: center;
+    color: $active-active;
+    background-color: #f5f5fa;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    @include min($md) {
+      @include font($ffamily, $fstyle, 700, 16px, 20px);
+      color: #ffffff;
+      background: none;
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+  }
+  &-text:last-child {
+    margin-bottom: 5px;
+    @include min($md) {
+      margin-bottom: 0;
+    }
+  }
+  &-text:hover {
+    background: #e6e6f0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    @include min($md) {
+      background: none;
+      border-radius: 0;
+      text-decoration: underline;
+      box-shadow: none;
+      text-underline-offset: 5px;
+      text-decoration-thickness: 2px;
+    }
+  }
+  &-text:focus {
+    background: #e6628c;
+    border-radius: 12px;
+    @include min($md) {
+      background: none;
+      border-radius: 0;
+      color: #e6628c;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      text-decoration-thickness: 2px;
+    }
+  }
+  .bg-active {
+    background: #f5f5fa;
+    margin-top: 5px;
+    @include min($md) {
+      background: none;
+      margin-top: 0;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      text-decoration-thickness: 2px;
+    }
+  }
+  .back {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 10px 5px 0;
+    @include min($md) {
+      background: none;
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+  .btn-close {
+    align-self: flex-end;
+    @include min($md) {
+      display: none;
+    }
+  }
+}

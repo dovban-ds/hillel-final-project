@@ -1,0 +1,72 @@
+@import "_variables";
+@import "_mixins";
+@import "../../homepage_layout/bootstrap/scss/functions";
+@import "../../homepage_layout/bootstrap/scss/variables";
+@import "../../homepage_layout/bootstrap/scss/maps";
+@import "../../homepage_layout/bootstrap/scss/mixins";
+@import "../../homepage_layout/bootstrap/scss/root";
+@import "../../homepage_layout/bootstrap/scss/nav";
+@import "../../homepage_layout/bootstrap/scss/navbar";
+@import "../../homepage_layout/bootstrap/scss/utilities";
+@import "../../homepage_layout/bootstrap/scss/helpers";
+@import "../../homepage_layout/bootstrap/scss/buttons";
+@import "../../homepage_layout/bootstrap/scss/transitions";
+@import "../../homepage_layout/bootstrap/scss/close";
+@import "../../homepage_layout/bootstrap/scss/modal";
+
+@import "header";
+@import "main";
+@import "footer";
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../../assets/font/Montserrat-Regular.ttf);
+  src: url(../../../assets/font/Montserrat-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  color: $text-color;
+}
+
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.background {
+  background: url(../../assets/images/hero_symbol.svg),
+    linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+  width: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.background::after {
+  content: "";
+  border-radius: 0px 0px 12px 12px;
+  background: #e7e7f2;
+  height: 10px;
+  max-width: 80vw;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 20px;
+}
+
+.background1 {
+  background: #cacadb;
+  border-radius: 0px 0px 12px 12px;
+  height: 10px;
+  margin-bottom: 60px;
+}
+
+.background2 {
+  background-color: #f5f5fa;
+}

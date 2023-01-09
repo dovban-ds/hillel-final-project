@@ -1,0 +1,45 @@
+// Colors
+$main-bgcolor: #323264;
+$accent-bgcolor: #f0145a;
+
+$active-color: #24a3ff;
+$active-hover: #0085ff;
+$active-active: #006ccf;
+
+$text-color: #b3b3ba;
+
+// Font
+$ffamily: "Montserrat";
+$fstyle: normal;
+
+// Breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 1024px;
+$xxl: 1920px;
+$lglg: 1440px;
+
+// Navbar
+$navbar-light-color: #ffffff;
+$navbar-light-hover-color: $accent-bgcolor;
+$navbar-light-active-color: $accent-bgcolor;
+$navbar-light-toggler-border-color: none;
+$navbar-toggler-focus-width: none;
+
+// Close
+$btn-close-color: #ec6f5d;
+
+// Nav tabs
+$nav-link-color: $text-color;
+
+$nav-tabs-border-color: none;
+$nav-tabs-border-width: none;
+$nav-tabs-border-radius: none;
+$nav-tabs-link-hover-border-color: none;
+$nav-tabs-link-active-color: #e6628c;
+$nav-tabs-link-active-bg: none;
+$nav-tabs-link-active-border-color: none;
+
+$nav-pills-border-radius: none;
+$nav-pills-link-active-color: none;
+$nav-pills-link-active-bg: none;

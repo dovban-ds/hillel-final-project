@@ -1,0 +1,95 @@
+footer {
+  hr {
+    max-width: 100%;
+  }
+  .section-footer {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include min($md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    &-address {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include min($md) {
+        flex-direction: row;
+        flex-basis: 50%;
+        align-items: baseline;
+      }
+      p {
+        @include font($ffamily, $fstyle, 400, 16px, 20px);
+        color: #323264;
+        margin-bottom: 10px;
+      }
+      a {
+        @include font($ffamily, $fstyle, 700, 12px, 15px);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $active-color;
+      }
+      a:hover {
+        color: $accent-bgcolor;
+      }
+    }
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0 30px;
+      @include min($md) {
+        flex-direction: row;
+        margin: 20px 0 0;
+      }
+      .fb-logo {
+        img {
+          max-width: 100%;
+          text-align: center;
+        }
+        img:hover {
+          cursor: pointer;
+          filter: invert(63%) sepia(55%) saturate(7491%) hue-rotate(332deg)
+            brightness(95%) contrast(97%);
+        }
+      }
+      a[href="tel:0800 211 927"] {
+        @include font($ffamily, $fstyle, 700, 16px, 20px);
+        color: #46466e;
+        margin: 10px 0;
+      }
+      a {
+        @include font($ffamily, $fstyle, 700, 16px, 20px);
+        color: $active-color;
+      }
+      a:hover {
+        color: $accent-bgcolor;
+      }
+    }
+    &-rights {
+      order: 1;
+      @include font($ffamily, $fstyle, 400, 16px, 20px);
+      color: $text-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include min($md) {
+        order: 0;
+        flex-direction: column;
+        flex-basis: 50%;
+        align-items: end;
+      }
+    }
+    .hide {
+      @include max(767px) {
+        display: none;
+      }
+      margin: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,205 @@
+// First section
+.information-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logo {
+    img {
+      max-width: 100%;
+    }
+  }
+  .text {
+    margin-top: 30px;
+    @include font($ffamily, $fstyle, 400, 19px, 30px);
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    p {
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+    &-title {
+      @include font($ffamily, $fstyle, 700, 30px, 37px);
+      text-align: center;
+      background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+  .button {
+    button {
+      @include font($ffamily, $fstyle, 700, 16px, 20px);
+      text-align: center;
+      color: #ffffff;
+      background-color: $active-color;
+      box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+      border: none;
+    }
+    .modal-header {
+      button {
+        background-color: #f5f5fa;
+        box-shadow: none;
+      }
+      h1 {
+        @include font($ffamily, $fstyle, 700, 30px, 37px);
+        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      input {
+        padding: 15px 0 15px 15px;
+        border: 1px solid #ffffff;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        @include font($ffamily, $fstyle, 400, 16px, 26px);
+        color: #b3b3ba;
+      }
+      input::placeholder {
+        @include font($ffamily, $fstyle, 400, 16px, 26px);
+        color: #b3b3ba;
+      }
+      input:focus {
+        outline-color: $active-color;
+      }
+      input:nth-child(2) {
+        margin-bottom: 0;
+      }
+      input:last-child {
+        margin-bottom: 0;
+      }
+      textarea {
+        padding: 15px 0 15px 15px;
+        border: 1px solid #ffffff;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        @include font($ffamily, $fstyle, 400, 16px, 26px);
+        color: #b3b3ba;
+        resize: none;
+      }
+      textarea::placeholder {
+        @include font($ffamily, $fstyle, 400, 16px, 26px);
+        color: #b3b3ba;
+      }
+      textarea:focus {
+        outline-color: $active-color;
+      }
+      p {
+        @include font($ffamily, $fstyle, 700, 14px, 17px);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #b3b3ba;
+        margin: 30px 0 15px;
+      }
+    }
+    .modal-footer {
+      display: flex;
+      justify-content: center;
+      button {
+        flex-basis: 100%;
+      }
+    }
+  }
+  .modal-dialog {
+    width: 80vw;
+    margin: 80px auto;
+  }
+}
+
+// Second section
+.section-publications {
+  padding-top: 30px;
+  h4 {
+    display: flex;
+    @include font($ffamily, $fstyle, 700, 14px, 17px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #24a3ff;
+  }
+  h4:hover {
+    cursor: pointer;
+    filter: invert(63%) sepia(55%) saturate(7491%) hue-rotate(332deg)
+      brightness(95%) contrast(97%);
+  }
+  h3 {
+    @include font($ffamily, $fstyle, 700, 30px, 37px);
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    max-width: 80%;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  &-cards {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 30px;
+    @include min($md) {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+    }
+    @include min($lg) {
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 8px 8px 8px 8px;
+      &-md {
+        @include min($md) {
+          grid-column: 1 / 3;
+        }
+        @include min($lg) {
+          grid-column: 3 / 3;
+        }
+      }
+      &-img {
+        img {
+          max-width: 100%;
+          border-radius: 8px 8px 0px 0px;
+          display: flex;
+        }
+      }
+      &-info {
+        padding: 30px;
+        h4 {
+          @include font($ffamily, $fstyle, 700, 16px, 20px);
+          color: #24a3ff;
+        }
+        .time {
+          @include font($ffamily, $fstyle, 700, 12px, 15px);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: $text-color;
+          margin-top: 15px;
+          @include min($lg) {
+            margin-bottom: 15px;
+          }
+        }
+        hr {
+          width: 100%;
+        }
+        p {
+          @include font($ffamily, $fstyle, 400, 14px, 22px);
+          color: #000000;
+          @include min($lg) {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}

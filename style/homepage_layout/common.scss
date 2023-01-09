@@ -1,0 +1,102 @@
+@import "_mixins";
+@import "_variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/close";
+@import "header";
+@import "main";
+@import "footer";
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../assets/font/Montserrat-Regular.ttf);
+  src: url(../../assets/font/Montserrat-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.container-xxl {
+  @include min($xxl) {
+    max-width: 95vw;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.background {
+  background: url(../../assets/images/hero_symbol.svg),
+    linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+  width: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.background::after {
+  content: "";
+  border-radius: 0px 0px 12px 12px;
+  background: #e7e7f2;
+  height: 10px;
+  max-width: 80vw;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 20px;
+}
+
+.background1 {
+  background: #cacadb;
+  border-radius: 0px 0px 12px 12px;
+  height: 10px;
+  margin-bottom: 50px;
+}
+
+.background2 {
+  background-color: #f5f5fa;
+}
+
+.nav {
+  @include max(1023px) {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  @include min($lg) {
+    flex-direction: column;
+    align-items: end;
+  }
+  &-link {
+    white-space: nowrap;
+  }
+}
+
+hr {
+  width: 100%;
+  margin: 30px 0;
+  background: rgba(255, 255, 255, 0.3);
+  @include min($lg) {
+    width: auto;
+    margin: 0;
+  }
+}
+
+// class = active ;   class = bg-active

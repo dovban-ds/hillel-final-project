@@ -1,0 +1,25 @@
+@mixin font(
+  $ffamily: "Montserrat",
+  $fstyle: normal,
+  $fweight,
+  $fsize,
+  $fheight
+) {
+  font-family: $ffamily;
+  font-style: $fstyle;
+  font-weight: $fweight;
+  font-size: $fsize;
+  line-height: $fheight;
+}
+
+@mixin min($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin max($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

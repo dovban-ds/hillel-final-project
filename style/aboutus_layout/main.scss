@@ -1,0 +1,273 @@
+main {
+  margin-top: 30px;
+  @include min($md) {
+    margin-top: 60px;
+  }
+}
+
+// First part
+.information-section {
+  display: flex;
+  flex-direction: column;
+  @include min($lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-text {
+    @include min($lg) {
+      flex-basis: 65%;
+    }
+    h1 {
+      @include font($ffamily, $fstyle, 700, 30px, 37px);
+      background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      margin-bottom: 25px;
+    }
+    p {
+      @include font($ffamily, $fstyle, 400, 19px, 30px);
+      color: #000000;
+      margin-bottom: 10px;
+    }
+    p:last-child {
+      margin: 0;
+    }
+  }
+  &-icons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    @include min($lg) {
+      flex-basis: 30%;
+    }
+    hr {
+      width: 4px;
+      height: auto;
+      background: #e6e6f0;
+      margin-right: 30px;
+    }
+    .list {
+      flex-grow: 1;
+      .positions {
+        margin-bottom: 40px;
+        .image {
+          display: flex;
+          align-items: baseline;
+          img {
+            max-width: 100%;
+          }
+          p {
+            @include font($ffamily, $fstyle, 700, 36px, 44px);
+            background: linear-gradient(
+              90.13deg,
+              #f0145a 0.84%,
+              #ef8080 99.96%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-left: 10px;
+          }
+        }
+        p {
+          @include font($ffamily, $fstyle, 400, 16px, 20px);
+          color: #323264;
+          margin-top: 10px;
+        }
+      }
+      .positions:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Second part
+.team-section {
+  margin: 30px 0;
+  background-image: url(../../assets/images/about-us/team.jpg);
+  background-size: cover;
+  @include min($md) {
+    margin: 60px 0;
+  }
+  p {
+    @include font($ffamily, $fstyle, 700, 36px, 44px);
+    text-align: center;
+    letter-spacing: 13px;
+    text-transform: uppercase;
+    color: #ffffff;
+    opacity: 0.8;
+    text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+    padding: 35px 0;
+    @include min($sm) {
+      padding: 60px 0;
+    }
+    @include min($md) {
+      @include font($ffamily, $fstyle, 700, 46px, 56px);
+      text-align: center;
+      letter-spacing: 63px;
+      text-transform: uppercase;
+      color: #ffffff;
+      opacity: 0.8;
+      text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+      padding: 90px 0;
+    }
+    @include min($lg) {
+      @include font($ffamily, $fstyle, 700, 86px, 105px);
+      text-align: center;
+      letter-spacing: 63px;
+      text-transform: uppercase;
+      color: #ffffff;
+      opacity: 0.8;
+      text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+      padding: 105px 0;
+    }
+    @include min(1440px) {
+      @include font($ffamily, $fstyle, 700, 96px, 117px);
+      letter-spacing: 63px;
+      color: #ffffff;
+      opacity: 0.8;
+      text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+      padding: 160px 0;
+    }
+    @include min($xxl) {
+      padding: 200px 0;
+    }
+  }
+}
+
+// Third part
+.quality-section {
+  display: flex;
+  flex-direction: column;
+  @include min($lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    @include min($lg) {
+      flex-basis: 65%;
+    }
+    p {
+      @include font($ffamily, $fstyle, 400, 19px, 30px);
+      color: #000000;
+      margin-bottom: 10px;
+    }
+    p:nth-child(3) {
+      margin-bottom: 30px;
+    }
+  }
+  h2 {
+    @include font($ffamily, $fstyle, 700, 30px, 37px);
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    @include min($lg) {
+      flex-basis: 30%;
+    }
+  }
+}
+
+// Fourth part
+.achievments-section {
+  max-width: 90vw;
+  margin: 60px auto 0;
+  h3 {
+    padding: 30px 0 0;
+    @include font($ffamily, $fstyle, 700, 14px, 17px);
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323264;
+    margin-bottom: 30px;
+  }
+  &-slider {
+    .slider {
+      width: 100%;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      .slider__nav {
+        box-sizing: border-box;
+        position: relative;
+        bottom: 0%;
+        left: 49%;
+        width: 200px;
+        margin-left: -96px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .slider__navlink {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px 0 10px;
+        background-color: $active-color;
+      }
+      .slider__navlink:hover {
+        background-color: $active-hover;
+      }
+      .slider__active {
+        background-color: $active-active;
+      }
+      .slides {
+        display: flex;
+        overflow-x: hidden;
+        position: relative;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        .slide {
+          display: flex;
+          flex-direction: row;
+          flex-shrink: 0;
+          width: 100%;
+          height: auto;
+          margin-right: 0px;
+          box-sizing: border-box;
+          transform-origin: center center;
+          transform: scale(1);
+          scroll-snap-align: center;
+          justify-content: space-around;
+          .photo {
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px 0;
+            flex-basis: 100%;
+            @include min(576px) {
+              flex-basis: 45%;
+            }
+            @include min(768px) {
+              flex-basis: 23%;
+              padding: 25px 10px;
+            }
+            img {
+              max-width: 100%;
+            }
+          }
+          .hide {
+            @include max(575px) {
+              display: none;
+            }
+          }
+          .hide1 {
+            @include max(767px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

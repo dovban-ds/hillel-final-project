@@ -1,0 +1,44 @@
+@import "_mixins";
+@import "_variables";
+@import "../homepage_layout/bootstrap/scss/functions";
+@import "../homepage_layout/bootstrap/scss/variables";
+@import "../homepage_layout/bootstrap/scss/maps";
+@import "../homepage_layout/bootstrap/scss/mixins";
+@import "../homepage_layout/bootstrap/scss/root";
+@import "../homepage_layout/bootstrap/scss/nav";
+@import "../homepage_layout/bootstrap/scss/navbar";
+@import "../homepage_layout/bootstrap/scss/utilities";
+@import "../homepage_layout/bootstrap/scss/helpers";
+@import "../homepage_layout/bootstrap/scss/transitions";
+@import "../homepage_layout/bootstrap/scss/close";
+@import "header";
+@import "main";
+@import "footer";
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../assets/font/Montserrat-Regular.ttf);
+  src: url(../../assets/font/Montserrat-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  color: $text-color;
+}
+
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0.5);
+}
+
+.bg {
+  background-color: #f5f5fa;
+}
