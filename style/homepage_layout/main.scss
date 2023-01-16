@@ -122,11 +122,10 @@
     text-fill-color: transparent;
   }
   &-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    row-gap: 30px;
+    display: flex;
+    flex-direction: column;
     @include min($md) {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       row-gap: 60px;
@@ -139,6 +138,7 @@
       column-gap: 60px;
     }
     .section-service-card {
+      margin-bottom: 50px;
       img {
         max-width: 100%;
       }
@@ -162,7 +162,7 @@
   .slider {
     width: 100%;
     height: auto;
-    border-radius: 12px 12px 0 0;
+    // border-radius: 12px 12px 0 0;
     position: relative;
     overflow: hidden;
     .slider__nav {
@@ -197,6 +197,7 @@
       position: relative;
       scroll-behavior: smooth;
       scroll-snap-type: x mandatory;
+      border-radius: 12px;
       .slide {
         display: flex;
         flex-direction: column;

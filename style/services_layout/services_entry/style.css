@@ -2065,6 +2065,60 @@ header {
   width: 80vw;
   margin: 80px auto;
 }
+.information-section-area {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 30px;
+  border-top: solid 4px;
+}
+@media screen and (min-width: 1024px) {
+  .information-section-area {
+    margin-bottom: 60px;
+  }
+}
+.information-section-area h4 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #ffffff;
+  margin: 30px 0;
+}
+.information-section-area .list {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .information-section-area .list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.information-section-area .list p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.information-section-area .list p img {
+  max-width: 100%;
+  filter: invert(60%) sepia(50%) saturate(6428%) hue-rotate(331deg) brightness(95%) contrast(97%);
+  margin-right: 10px;
+}
+.information-section-area .list p:nth-child(4n) {
+  margin-bottom: 30px;
+}
+.information-section-area .list .first-list {
+  flex-basis: 45%;
+}
+.information-section-area .list .second-list {
+  flex-basis: 45%;
+}
 
 .section-publications {
   padding-top: 30px;
@@ -2101,13 +2155,12 @@ header {
 }
 .section-publications-cards {
   margin-bottom: 30px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  row-gap: 30px;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .section-publications-cards {
+    display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
@@ -2123,6 +2176,7 @@ header {
 .section-publications-cards .card {
   background-color: #ffffff;
   border-radius: 8px 8px 8px 8px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .section-publications-cards .card-md {
@@ -2354,6 +2408,10 @@ a {
 
 .background2 {
   background-color: #f5f5fa;
+}
+
+.btn-close {
+  align-self: baseline;
 }
 
 /*# sourceMappingURL=style.css.map */

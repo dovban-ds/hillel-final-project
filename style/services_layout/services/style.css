@@ -1268,13 +1268,12 @@ header {
   text-fill-color: transparent;
 }
 .section-service-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
-  row-gap: 30px;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .section-service-cards {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     row-gap: 60px;
@@ -1288,6 +1287,9 @@ header {
     row-gap: 60px;
     column-gap: 60px;
   }
+}
+.section-service-cards .section-service-card {
+  margin-bottom: 50px;
 }
 .section-service-cards .section-service-card img {
   max-width: 100%;

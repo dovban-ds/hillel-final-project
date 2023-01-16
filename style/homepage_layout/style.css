@@ -1397,13 +1397,12 @@
   text-fill-color: transparent;
 }
 .section-service-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
-  row-gap: 30px;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .section-service-cards {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     row-gap: 60px;
@@ -1417,6 +1416,9 @@
     row-gap: 60px;
     column-gap: 60px;
   }
+}
+.section-service-cards .section-service-card {
+  margin-bottom: 50px;
 }
 .section-service-cards .section-service-card img {
   max-width: 100%;
@@ -1446,7 +1448,6 @@
 .section-team .slider {
   width: 100%;
   height: auto;
-  border-radius: 12px 12px 0 0;
   position: relative;
   overflow: hidden;
 }
@@ -1481,6 +1482,7 @@
   position: relative;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  border-radius: 12px;
 }
 .section-team .slider .slides .slide {
   display: flex;
